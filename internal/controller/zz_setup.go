@@ -10,6 +10,7 @@ import (
 	"github.com/upbound/upjet/pkg/controller"
 
 	instancev2 "github.com/stakater/provider-openstack/internal/controller/compute/instancev2"
+	projectv3 "github.com/stakater/provider-openstack/internal/controller/identity/projectv3"
 	addressscopev2 "github.com/stakater/provider-openstack/internal/controller/networking/addressscopev2"
 	networkv2 "github.com/stakater/provider-openstack/internal/controller/networking/networkv2"
 	providerconfig "github.com/stakater/provider-openstack/internal/controller/providerconfig"
@@ -20,6 +21,7 @@ import (
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		instancev2.Setup,
+		projectv3.Setup,
 		addressscopev2.Setup,
 		networkv2.Setup,
 		providerconfig.Setup,

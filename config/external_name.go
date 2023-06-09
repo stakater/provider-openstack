@@ -14,6 +14,8 @@ var ExternalNameConfigs = map[string]config.ExternalName{
 	"openstack_networking_network_v2":      config.IdentifierFromProvider,
 	"openstack_networking_addressscope_v2": config.IdentifierFromProvider,
 	"openstack_identity_project_v3":        config.IdentifierFromProvider,
+	"openstack_networking_port_v2":         config.IdentifierFromProvider,
+	"openstack_networking_floatingip_v2":   config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the
